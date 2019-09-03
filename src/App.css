@@ -1,0 +1,39 @@
+header{
+    border: 2px solid lightseagreen;
+    background-image: url('./imgs/header.png') ;
+    background-size: 100%;
+    
+}
+
+button {
+    background-image: url('./imgs/header.png');
+    border: none;
+    color: gray;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 5%;
+    cursor: pointer;
+    
+    
+  }
+
+  button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+
+
+.Main{
+    border: 2px solid black
+}
+
+
+
+
+footer{
+    border: 2px solid black
+}
