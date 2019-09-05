@@ -1,9 +1,10 @@
 import React from 'react'
-import SignIn from './SignIn'
-import SignUp from './SignUp'
+import SignIn from './SignIn&SignUp'
+
 
 
 class Header extends React.Component{
+    
 
     render(){
         return(
@@ -12,8 +13,9 @@ class Header extends React.Component{
                     <ul>
                         <button>HR/ENG</button>
                         <button>Theme</button>
-                        <SignIn />
-                        <SignUp />
+                        < SignIn />
+                        
+                        
                     </ul>
                 </header>     
             </div>
