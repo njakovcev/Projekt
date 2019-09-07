@@ -1,0 +1,36 @@
+.listing {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 16.66rem;
+    margin: 0 .5rem 2.3rem .5rem;
+  }
+  
+  .listing .imgContainer {
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    height: 10rem;
+  }
+  
+  .listing h2 {
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .listingInformation {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .listingInformation p {
+    font-size: .88rem;
+    font-weight: 300;
+    line-height: 1rem;
+  }
+  
+ 
+  
