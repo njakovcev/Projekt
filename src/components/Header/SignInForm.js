@@ -6,9 +6,11 @@ class SignInForm extends React.Component {
         this.state = {
             username: '',
             password: ''
+            
         }
         
         this.handleChange = this.handleChange.bind(this)
+        
     }
 
     handleChange = (e) => {
@@ -17,10 +19,13 @@ class SignInForm extends React.Component {
             
         })
     }
+
     
 
     render(){
+        
         return(
+
             <div>
                 {console.log(this.state)}
                 <input
@@ -39,6 +44,8 @@ class SignInForm extends React.Component {
                 >
                 </input>
                 <button onClick={this.handleChange}>Submit</button>
+                
+                
                 
             </div>
         )
