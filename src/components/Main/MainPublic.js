@@ -1,7 +1,7 @@
 import React from 'react'
 import Listings from './Listings';
 import SearchBar from './SearchBar'
-import CreateListing from './CreateListing';
+
 
 class MainPublic extends React.Component{
 

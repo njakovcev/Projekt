@@ -5,8 +5,10 @@ import UploadImg from './UploadImg'
 class Profile extends React.Component{
     render(){
         return(
-            <CreateListing />
-            <UploadImg />
+            <div>
+                <CreateListing />
+                <UploadImg />
+            </div>
         )
     }
 }
