@@ -1,4 +1,6 @@
 import React from 'react'
+import {PostData} from '../Post'
+import {Redirect} from 'react-router-dom'
 
 class SignUpForm extends React.Component {
     constructor(){
@@ -7,10 +9,14 @@ class SignUpForm extends React.Component {
             firstName: '',
             lastName: '',
             email: '',
-            password: ''
+            password: '',
+            redirect: false
+            
         }
         
         this.handleChange = this.handleChange.bind(this)
+        this.signup = this.signup.bind(this)
+        
     }
 
     handleChange = (e) => {
@@ -19,9 +25,25 @@ class SignUpForm extends React.Component {
             
         })
     }
-    
+
+    signup() {
+        if(this.state.firstName && this.state.lastName && this.state.password && this.state.email){
+            PostData('signup', this.state).then(result => {
+                let responseJson = result
+                if(responseJson.userData){
+                    sessionStorage.setItem('userData', JSON.stringify(responseJson))
+                    this.setState({redirect: true})
+                }
+            })
+        }
+    }
+
 
     render(){
+        if(this.state.redirect || sessionStorage.getItem('userData')){
+            return(<Redirect to={'/Profile'}/>)
+        }
+
         return(
             <div>
                 {console.log(this.state)}
@@ -51,12 +73,14 @@ class SignUpForm extends React.Component {
                 onChange={this.handleChange}
                 value={this.state.password}
                 ></input>
-                <select>
+                <select 
+                value={this.state.userType}
+                onChange={this.handleChange}>
                     <option value='admin'>Admin</option>
                     <option value='receptionist'>Receptionist</option>
                     <option value='housekeeper'>Housekeeper</option>
                 </select>
-                <button onClick={this.handleChange}>Submit</button>
+                <button onClick={this.signup}>Submit</button>
                 
             </div>
         )
