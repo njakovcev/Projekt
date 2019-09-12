@@ -1,5 +1,5 @@
 import React from 'react'
-import axios from 'axios'
+/*import axios from 'axios'*/
 
 
 class UploadImg extends React.Component{
@@ -19,12 +19,12 @@ class UploadImg extends React.Component{
     
     }
 
-    handleUpload(){
+    /*handleUpload(){
         const data = new FormData()
         data.append('image', this.state.image, this.state.image.name)
         axios.post('url', data)
         .then(res => console.log(res))
-    }
+    } */
 
 
 
