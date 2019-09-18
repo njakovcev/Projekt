@@ -1,0 +1,13 @@
+form {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid lightgray;
+    padding: 60px;
+    background-color: white;
+    margin: auto;
+    max-width: 300px;
+    border-bottom: none;
+}

@@ -1,0 +1,62 @@
+form {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid lightgray;
+    padding: 60px;
+    background-color: white;
+    margin: auto;
+    max-width: 300px;
+}
+
+input{
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid gray;
+    background-color: white;
+    font-family: 'Roboto';
+    font-size: 16px;
+    opacity: 0.3;
+    
+}
+
+
+
+input:focus{
+    background-color:whitesmoke;
+    outline: none
+
+}
+
+
+
+.select  {
+    height: 30px;
+    border: none;
+    margin: 20px 20px;
+    border-radius: 5%;
+    background-color: whitesmoke;
+    position: relative;
+    outline: none;
+    
+}
+
+.select focus{
+    outline:none;
+}
+
+button {
+    border-radius: 5%;
+    height: 30px;
+    position: relative;
+    background-color: whitesmoke;
+    outline: none;
+    border: none;
+    margin: 20px 20px;
+    margin-top: 10px;
+}
+

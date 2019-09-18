@@ -1,19 +1,18 @@
 import React from 'react';
 
-import Header from './components/Header/Header'
-import MainPublic from './components/Main/MainPublic'
-import Footer from './components/Footer'
-
-import './App.css';
+/*import './App.css';*/
+import PublicPage from './components/MainPublic/PublicPage';
 
 
 class App extends React.Component {
   render(){
     return(
       <div>
-        <Header />
-        <MainPublic />
-        <Footer />
+        
+       
+        <PublicPage />
+       
+        
 
 
 

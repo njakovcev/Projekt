@@ -1,6 +1,7 @@
 import React from 'react'
 import {PostData} from '../Post'
 import {Redirect} from 'react-router-dom'
+import './SignUpForm.css'
 
 class SignInForm extends React.Component {
     constructor(){
@@ -49,29 +50,33 @@ class SignInForm extends React.Component {
         }
         
         return(
+            
 
-            <div>
-                {console.log(this.state)}
-                <input
-                name='username' 
-                placeholder='Username'
-                onChange ={this.handleChange}
-                value={this.state.username}
-                >
-                </input>
-                <input
-                name='password'
-                type='password' 
-                placeholder='Password'
-                onChange ={this.handleChange}
-                value={this.state.password}
-                >
-                </input>
-                <button onClick={this.handleChange}>Submit</button>
+            <div className='container'>
+                <form>
+                    {console.log(this.state)}
+                    <label/>Sign In
+                    <input
+                    name='username' 
+                    placeholder='Username'
+                    onChange ={this.handleChange}
+                    value={this.state.username}
+                    >
+                    </input>
+                    <input
+                    name='password'
+                    type='password' 
+                    placeholder='Password'
+                    onChange ={this.handleChange}
+                    value={this.state.password}
+                    >
+                    </input>
+                    <button onClick={this.handleChange}>Submit</button>
+                    
                 
-                
-                
+                </form>
             </div>
+
         )
     }
 }

@@ -1,5 +1,5 @@
 export function PostData(type, userData) {
-    let url = '';
+    let url = 'https://localhost:3000/';
     //ode triba neki url, ja nemam pojma koji :/
 
     return new Promise((resolve, reject) =>{
@@ -12,7 +12,7 @@ export function PostData(type, userData) {
           .then((response) => response.json())
           .then((res) => {
             resolve(res);
-          })
+          }).then(response => console.log(response.json))
           .catch((error) => {
             reject(error);
           });
@@ -20,3 +20,4 @@ export function PostData(type, userData) {
   
       });
 }
+

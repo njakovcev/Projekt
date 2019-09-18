@@ -1,5 +1,6 @@
 import React from 'react'
-/*import axios from 'axios'*/
+import axios from 'axios'
+import './UploadImg.css'
 
 
 class UploadImg extends React.Component{
@@ -19,12 +20,12 @@ class UploadImg extends React.Component{
     
     }
 
-    /*handleUpload(){
+    handleUpload(){
         const data = new FormData()
         data.append('image', this.state.image, this.state.image.name)
         axios.post('url', data)
         .then(res => console.log(res))
-    } */
+    } 
 
 
 
@@ -32,9 +33,19 @@ class UploadImg extends React.Component{
         return(
             <div>
                     <div>
-                        <input type='file' onChange={this.selectedFile}></input>
+                        <label onClick={this.handleUpload} className="uploadLabel" for="uploadBtn">  Upload</label>
+                        <input 
+                        type='file' 
+                        onChange={this.selectedFile}
+                        name='file'
+                        value={this.state.image}
+                        className='uploadLabel'
+                        id='uploadBtn'
+                        />
+                        
                     </div>
-                <button onClick={this.handleUpload}>Upload</button>
+               
+                
             </div>
         )
     }
