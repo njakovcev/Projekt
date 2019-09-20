@@ -49,14 +49,24 @@ input:focus{
     outline:none;
 }
 
-button {
+.submit {
+    
     border-radius: 5%;
     height: 30px;
     position: relative;
-    background-color: whitesmoke;
+    background-color:whitesmoke;
     outline: none;
     border: none;
     margin: 20px 20px;
     margin-top: 10px;
+}
+
+.signin{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    max-width: 300px;
+    padding: 20px;
+    margin: auto;
 }
 

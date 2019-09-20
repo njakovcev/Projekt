@@ -6,20 +6,11 @@ import './SignUpForm.css'
 
 
 class SignUpForm extends React.Component {
-    constructor(){
-        super()
-        this.state = {
+    state = {
             firstName: '',
             lastName: '',
             email: '',
             password: '',
-            
-            
-        }
-        
-        this.handleChange = this.handleChange.bind(this)
-        this.signup = this.signup.bind(this)
-        
     }
 
     handleChange = (e) => {
@@ -41,6 +32,10 @@ class SignUpForm extends React.Component {
         }
     }
 
+    submitForm = e => {
+        e.preventDefault()
+        console.log(this.state)
+    }
 
     render(){
         
@@ -93,7 +88,7 @@ class SignUpForm extends React.Component {
                         <option value='receptionist'>Receptionist</option>
                         <option value='housekeeper'>Housekeeper</option>
                     </select>
-                    <button onClick={this.signup}>Submit</button>
+                    <input className='submit' type="button" onClick={this.submitForm} value='submit' />
                 </form>
                 
             </div>

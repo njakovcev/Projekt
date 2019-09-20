@@ -4,18 +4,10 @@ import {Redirect} from 'react-router-dom'
 import './SignUpForm.css'
 
 class SignInForm extends React.Component {
-    constructor(){
-        super()
-        this.state = {
-            username: '',
-            password: '',
-            redirect: false
-            
-        }
-        
-        this.handleChange = this.handleChange.bind(this)
-        this.login = this.login.bind(this)
-        
+    state = {
+        username: '',
+        password: '',
+        redirect: false  
     }
 
     handleChange = (e) => {
@@ -25,7 +17,7 @@ class SignInForm extends React.Component {
         })
     }
 
-    login(){
+    login = () => {
         if(this.state.username && this.state.password){
             PostData('login', this.state).then(result => {
                 let responseJson = result
@@ -39,9 +31,18 @@ class SignInForm extends React.Component {
 
     
 
-    render(){
+    submitForm = e => {
+        e.preventDefault()
+        console.log(this.state)
+    }
 
-        if(this.state.redirect){
+
+    
+
+    render(){
+        const {redirect} = this.state
+
+        if(redirect){
             return(<Redirect to={'/Profile'} />)
         }
 
@@ -53,9 +54,9 @@ class SignInForm extends React.Component {
             
 
             <div className='container'>
-                <form>
+                <div className='signin'>
                     {console.log(this.state)}
-                    <label/>Sign In
+                    <label/>Sign In <br/>
                     <input
                     name='username' 
                     placeholder='Username'
@@ -71,10 +72,8 @@ class SignInForm extends React.Component {
                     value={this.state.password}
                     >
                     </input>
-                    <button onClick={this.handleChange}>Submit</button>
-                    
-                
-                </form>
+                    <input className='submit' type="button" onClick={this.submitForm} value='submit' />
+                </div>
             </div>
 
         )
